@@ -1,0 +1,161 @@
+2022-05-11 10:11:03,004 DEBUG    root            Loaded Command Group: ['gcloud', 'init']
+2022-05-11 10:11:03,007 DEBUG    root            Running [gcloud.init] with arguments: []
+2022-05-11 10:11:03,007 INFO     ___FILE_ONLY___ Welcome! This command will take you through the configuration of gcloud.
+
+
+2022-05-11 10:11:03,010 INFO     ___FILE_ONLY___ Your current configuration has been set to: [default]
+
+
+2022-05-11 10:11:03,010 INFO     ___FILE_ONLY___ You can skip diagnostics next time by using the following flag:
+
+2022-05-11 10:11:03,010 INFO     ___FILE_ONLY___   gcloud init --skip-diagnostics
+
+
+2022-05-11 10:11:03,010 INFO     ___FILE_ONLY___ Network diagnostic detects and fixes local network connection issues.
+
+2022-05-11 10:11:03,011 INFO     ___FILE_ONLY___ Checking network connection...
+2022-05-11 10:11:06,109 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): accounts.google.com:443
+2022-05-11 10:11:06,568 DEBUG    urllib3.connectionpool https://accounts.google.com:443 "GET / HTTP/1.1" 302 338
+2022-05-11 10:11:06,670 DEBUG    urllib3.connectionpool https://accounts.google.com:443 "GET /ServiceLogin?passive=1209600&continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F HTTP/1.1" 200 None
+2022-05-11 10:11:06,860 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2022-05-11 10:11:08,288 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "GET /v1beta1/projects HTTP/1.1" 401 None
+2022-05-11 10:11:08,290 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+2022-05-11 10:11:08,427 DEBUG    urllib3.connectionpool https://www.googleapis.com:443 "GET /auth/cloud-platform HTTP/1.1" 200 14
+2022-05-11 10:11:08,430 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): dl.google.com:443
+2022-05-11 10:11:08,575 DEBUG    urllib3.connectionpool https://dl.google.com:443 "GET /dl/cloudsdk/channels/rapid/components-2.json HTTP/1.1" 200 187088
+2022-05-11 10:11:08,625 INFO     ___FILE_ONLY___ Reachability Check passed.
+
+2022-05-11 10:11:08,625 INFO     ___FILE_ONLY___ Network diagnostic passed (1/1 checks passed).
+
+
+2022-05-11 10:11:21,143 INFO     ___FILE_ONLY___ You are logged in as: [801727839795-compute@developer.gserviceaccount.com].
+
+
+2022-05-11 10:11:21,154 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/?recursive=true
+2022-05-11 10:11:21,155 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-05-11 10:11:21,158 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 197
+2022-05-11 10:11:21,159 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/token
+2022-05-11 10:11:21,161 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 278
+2022-05-11 10:11:21,240 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/?recursive=true
+2022-05-11 10:11:21,242 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-05-11 10:11:21,244 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 197
+2022-05-11 10:11:21,244 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/token
+2022-05-11 10:11:21,247 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 278
+2022-05-11 10:11:21,269 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2022-05-11 10:11:22,695 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "GET /v1/projects?alt=json&filter=lifecycleState%3AACTIVE&pageSize=201 HTTP/1.1" 403 None
+2022-05-11 10:11:22,696 WARNING  root            Listing available projects failed: HttpError accessing <https://cloudresourcemanager.googleapis.com/v1/projects?alt=json&filter=lifecycleState%3AACTIVE&pageSize=201>: response: <{'www-authenticate': 'Bearer realm="https://accounts.google.com/", error="insufficient_scope", scope="https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloud-platform.read-only https://www.googleapis.com/auth/cloudplatformprojects https://www.googleapis.com/auth/cloudplatformprojects.readonly"', 'vary': 'Origin, X-Origin, Referer', 'content-type': 'application/json; charset=UTF-8', 'content-encoding': 'gzip', 'date': 'Wed, 11 May 2022 10:11:22 GMT', 'server': 'ESF', 'cache-control': 'private', 'x-xss-protection': '0', 'x-frame-options': 'SAMEORIGIN', 'x-content-type-options': 'nosniff', 'server-timing': 'gfet4t7; dur=1288', 'transfer-encoding': 'chunked', 'status': 403}>, content <{
+  "error": {
+    "code": 403,
+    "message": "Request had insufficient authentication scopes.",
+    "status": "PERMISSION_DENIED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "ACCESS_TOKEN_SCOPE_INSUFFICIENT",
+        "domain": "googleapis.com",
+        "metadata": {
+          "method": "google.cloudresourcemanager.v1.Projects.ListProjects",
+          "service": "cloudresourcemanager.googleapis.com"
+        }
+      }
+    ]
+  }
+}
+>
+2022-05-11 10:12:42,515 INFO     ___FILE_ONLY___ Your current project has been set to: [genuine-range-349802].
+
+
+2022-05-11 10:12:42,595 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2022-05-11 10:12:42,605 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'project_info']
+2022-05-11 10:12:42,625 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'project-info', 'describe']
+2022-05-11 10:12:42,626 INFO     root            Executing: [gcloud compute project-info describe --quiet]
+2022-05-11 10:12:42,631 DEBUG    root            Running [gcloud.compute.project-info.describe] with arguments: [--no-user-output-enabled: "false", --quiet: "True", --verbosity: "none"]
+2022-05-11 10:12:42,636 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/?recursive=true
+2022-05-11 10:12:42,638 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-05-11 10:12:42,640 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 197
+2022-05-11 10:12:42,641 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/token
+2022-05-11 10:12:42,644 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 277
+2022-05-11 10:12:42,722 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/?recursive=true
+2022-05-11 10:12:42,724 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-05-11 10:12:42,726 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 197
+2022-05-11 10:12:42,727 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/token
+2022-05-11 10:12:42,730 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 277
+2022-05-11 10:12:42,971 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): compute.googleapis.com:443
+2022-05-11 10:12:43,177 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "POST /batch/compute/v1 HTTP/1.1" 200 None
+2022-05-11 10:12:48,310 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "POST /batch/compute/v1 HTTP/1.1" 200 None
+2022-05-11 10:12:53,443 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "POST /batch/compute/v1 HTTP/1.1" 200 None
+2022-05-11 10:12:58,574 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "POST /batch/compute/v1 HTTP/1.1" 200 None
+2022-05-11 10:13:03,709 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "POST /batch/compute/v1 HTTP/1.1" 200 None
+2022-05-11 10:13:03,712 DEBUG    root            (gcloud.compute.project-info.describe) Could not fetch resource:
+ - Request had insufficient authentication scopes.
+Traceback (most recent call last):
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib64/google-cloud-sdk/lib/surface/compute/project_info/describe.py", line 37, in Run
+    return client.MakeRequests([(client.apitools_client.projects, 'Get',
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/client_adapter.py", line 106, in MakeRequests
+    utils.RaiseToolException(
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/utils.py", line 128, in RaiseToolException
+    RaiseException(problems, calliope_exceptions.ToolException, error_message)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/utils.py", line 137, in RaiseException
+    raise exception(
+googlecloudsdk.calliope.exceptions.ToolException: Could not fetch resource:
+ - Request had insufficient authentication scopes.
+
+2022-05-11 10:13:03,718 ERROR    root            (gcloud.compute.project-info.describe) Could not fetch resource:
+ - Request had insufficient authentication scopes.
+
+2022-05-11 10:13:03,719 INFO     root            [compute project-info describe --quiet] has failed
+
+2022-05-11 10:13:03,719 INFO     ___FILE_ONLY___ Not setting default zone/region (this feature makes it easier to use
+[gcloud compute] by setting an appropriate default value for the
+--zone and --region flag).
+See https://cloud.google.com/compute/docs/gcloud-compute section on how to set
+default compute region and zone manually. If you would like [gcloud init] to be
+able to do this for you the next time you run it, make sure the
+Compute Engine API is enabled for your project on the
+https://console.developers.google.com/apis page.
+
+
+2022-05-11 10:13:03,719 DEBUG    root            Executing command: ['/usr/lib64/google-cloud-sdk/bin/gsutil', 'config', '-n', '-o', '/root/.boto']
+2022-05-11 10:13:03,729 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): www.gstatic.com:443
+2022-05-11 10:13:03,807 DEBUG    urllib3.connectionpool https://www.gstatic.com:443 "GET /cloudsdk/feature_flag_config_file.yaml HTTP/1.1" 200 101
+2022-05-11 10:13:05,980 DEBUG    ___FILE_ONLY___ 
+2022-05-11 10:13:05,980 DEBUG    ___FILE_ONLY___ This command will create a boto config file at /root/.boto containing
+your credentials, based on your responses to the following questions.
+
+Boto config file "/root/.boto" created. If you need to use a proxy to
+access the Internet please see the instructions in that file.
+
+2022-05-11 10:13:05,980 INFO     ___FILE_ONLY___ Created a default .boto configuration file at [/root/.boto]. See this file and
+[https://cloud.google.com/storage/docs/gsutil/commands/config] for more
+information about configuring Google Cloud Storage.
+
+2022-05-11 10:13:05,980 INFO     ___FILE_ONLY___ Your Google Cloud SDK is configured and ready to use!
+
+
+2022-05-11 10:13:05,981 INFO     ___FILE_ONLY___ * Commands that require authentication will use 801727839795-compute@developer.gserviceaccount.com by default
+
+2022-05-11 10:13:05,981 INFO     ___FILE_ONLY___ * Commands will reference project `genuine-range-349802` by default
+
+2022-05-11 10:13:05,981 INFO     ___FILE_ONLY___ Run `gcloud help config` to learn how to change individual settings
+
+
+2022-05-11 10:13:05,981 INFO     ___FILE_ONLY___ This gcloud configuration is called [default]. You can create additional configurations if you work with multiple accounts and/or projects.
+
+2022-05-11 10:13:05,981 INFO     ___FILE_ONLY___ Run `gcloud topic configurations` to learn more.
+
+
+2022-05-11 10:13:05,981 INFO     ___FILE_ONLY___ Some things to try next:
+
+
+2022-05-11 10:13:05,981 INFO     ___FILE_ONLY___ * Run `gcloud --help` to see the Cloud Platform services you can interact with. And run `gcloud help COMMAND` to get help on any gcloud command.
+
+2022-05-11 10:13:05,982 INFO     ___FILE_ONLY___ * Run `gcloud topic --help` to learn about advanced features of the SDK like arg files and output formatting
+
+2022-05-11 10:13:05,982 INFO     ___FILE_ONLY___ * Run `gcloud cheat-sheet` to see a roster of go-to `gcloud` commands.
+
+2022-05-11 10:13:05,983 INFO     root            Display format: "default"
+2022-05-11 10:13:05,984 DEBUG    root            SDK update checks are disabled.

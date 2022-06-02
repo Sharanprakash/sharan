@@ -1,0 +1,83 @@
+2022-05-12 06:41:02,017 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
+2022-05-12 06:41:02,020 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'list']
+2022-05-12 06:41:02,022 DEBUG    root            Running [gcloud.projects.list] with arguments: []
+2022-05-12 06:41:02,022 INFO     root            client_filter="None" server_filter="None"
+2022-05-12 06:41:02,029 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/?recursive=true
+2022-05-12 06:41:02,031 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-05-12 06:41:02,032 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 197
+2022-05-12 06:41:02,033 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/token
+2022-05-12 06:41:02,035 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 275
+2022-05-12 06:41:02,113 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/?recursive=true
+2022-05-12 06:41:02,115 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-05-12 06:41:02,116 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 197
+2022-05-12 06:41:02,117 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/token
+2022-05-12 06:41:02,119 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 275
+2022-05-12 06:41:02,132 INFO     root            Display format: "
+    table(
+      projectId:sort=1,
+      name,
+      projectNumber
+    )
+"
+2022-05-12 06:41:02,135 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2022-05-12 06:41:03,562 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "GET /v1/projects?alt=json&filter=lifecycleState%3AACTIVE&pageSize=500 HTTP/1.1" 403 None
+2022-05-12 06:41:03,570 DEBUG    root            (gcloud.projects.list) PERMISSION_DENIED: Request had insufficient authentication scopes.
+- '@type': type.googleapis.com/google.rpc.ErrorInfo
+  domain: googleapis.com
+  metadata:
+    method: google.cloudresourcemanager.v1.Projects.ListProjects
+    service: cloudresourcemanager.googleapis.com
+  reason: ACCESS_TOKEN_SCOPE_INSUFFICIENT
+
+If you are in a compute engine VM, it is likely that the specified scopes during VM creation are not enough to run this command.
+See https://cloud.google.com/compute/docs/access/service-accounts#accesscopesiam for more information about access scopes.
+See https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes for how to update access scopes of the VM.
+Traceback (most recent call last):
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 810, in Run
+    resources = display.Displayer(command_instance, args, resources,
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/display.py", line 483, in Display
+    self._printer.Print(self._resources)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/core/resource/resource_printer_base.py", line 298, in Print
+    for resource in resources:
+  File "/usr/lib64/google-cloud-sdk/lib/third_party/apitools/base/py/list_pager.py", line 120, in YieldFromList
+    response = getattr(service, method)(request,
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/third_party/apis/cloudresourcemanager/v1/cloudresourcemanager_v1_client.py", line 888, in List
+    return self._RunMethod(
+  File "/usr/lib64/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 737, in _RunMethod
+    return self.ProcessHttpResponse(method_config, http_response, request)
+  File "/usr/lib64/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 743, in ProcessHttpResponse
+    self.__ProcessHttpResponse(method_config, http_response, request))
+  File "/usr/lib64/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 609, in __ProcessHttpResponse
+    raise exceptions.HttpError.FromResponse(
+apitools.base.py.exceptions.HttpForbiddenError: HttpError accessing <https://cloudresourcemanager.googleapis.com/v1/projects?alt=json&filter=lifecycleState%3AACTIVE&pageSize=500>: response: <{'www-authenticate': 'Bearer realm="https://accounts.google.com/", error="insufficient_scope", scope="https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloud-platform.read-only https://www.googleapis.com/auth/cloudplatformprojects https://www.googleapis.com/auth/cloudplatformprojects.readonly"', 'vary': 'Origin, X-Origin, Referer', 'content-type': 'application/json; charset=UTF-8', 'content-encoding': 'gzip', 'date': 'Thu, 12 May 2022 06:41:03 GMT', 'server': 'ESF', 'cache-control': 'private', 'x-xss-protection': '0', 'x-frame-options': 'SAMEORIGIN', 'x-content-type-options': 'nosniff', 'server-timing': 'gfet4t7; dur=1289', 'transfer-encoding': 'chunked', 'status': 403}>, content <{
+  "error": {
+    "code": 403,
+    "message": "Request had insufficient authentication scopes.",
+    "status": "PERMISSION_DENIED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "ACCESS_TOKEN_SCOPE_INSUFFICIENT",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "cloudresourcemanager.googleapis.com",
+          "method": "google.cloudresourcemanager.v1.Projects.ListProjects"
+        }
+      }
+    ]
+  }
+}
+>
+2022-05-12 06:41:03,571 ERROR    root            (gcloud.projects.list) PERMISSION_DENIED: Request had insufficient authentication scopes.
+- '@type': type.googleapis.com/google.rpc.ErrorInfo
+  domain: googleapis.com
+  metadata:
+    method: google.cloudresourcemanager.v1.Projects.ListProjects
+    service: cloudresourcemanager.googleapis.com
+  reason: ACCESS_TOKEN_SCOPE_INSUFFICIENT
+
+If you are in a compute engine VM, it is likely that the specified scopes during VM creation are not enough to run this command.
+See https://cloud.google.com/compute/docs/access/service-accounts#accesscopesiam for more information about access scopes.
+See https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes for how to update access scopes of the VM.

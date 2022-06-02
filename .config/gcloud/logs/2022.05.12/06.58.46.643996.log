@@ -1,0 +1,15 @@
+2022-05-12 06:58:46,645 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2022-05-12 06:58:46,678 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'login']
+2022-05-12 06:58:46,681 DEBUG    root            Running [gcloud.auth.login] with arguments: [--remote-bootstrap: "https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=32555940559.apps.googleusercontent.com&scope=openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fappengine.admin+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcompute+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Faccounts.reauth&state=Jfiszc1jRCHYHStLyndmSz8pvjQppA&access_type=offline&code_challenge=5XyC41lFp_Z20r52N_-3M1SOZMDEuoJmFLPJZ1aIaes&code_challenge_method=S256&token_usage=remote"]
+2022-05-12 06:58:50,829 DEBUG    root            (gcloud.auth.login) Cannot launch browser. Please run this command on a machine where gcloud can launch a web browser.
+Traceback (most recent call last):
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib64/google-cloud-sdk/lib/surface/auth/login.py", line 248, in Run
+    creds = auth_util.DoInstalledAppBrowserFlowGoogleAuth(
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/api_lib/auth/util.py", line 295, in DoInstalledAppBrowserFlowGoogleAuth
+    raise c_flow.WebBrowserInaccessible(
+googlecloudsdk.core.credentials.flow.WebBrowserInaccessible: Cannot launch browser. Please run this command on a machine where gcloud can launch a web browser.
+2022-05-12 06:58:50,831 ERROR    root            (gcloud.auth.login) Cannot launch browser. Please run this command on a machine where gcloud can launch a web browser.

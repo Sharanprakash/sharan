@@ -1,0 +1,44 @@
+2022-05-12 10:03:33,251 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2022-05-12 10:03:33,259 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'docker_helper']
+2022-05-12 10:03:33,261 DEBUG    root            Running [gcloud.auth.docker-helper] with arguments: [METHOD: "get"]
+2022-05-12 10:03:33,274 DEBUG    root            (gcloud.auth.docker-helper) Your current active account [801727839795-compute@developer.gserviceaccount.com] does not have any valid credentials
+Please run:
+
+  $ gcloud auth login
+
+to obtain new credentials.
+
+For service account, please activate it first:
+
+  $ gcloud auth activate-service-account ACCOUNT
+Traceback (most recent call last):
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib64/google-cloud-sdk/lib/surface/auth/docker_helper.py", line 66, in Run
+    cred = c_store.Load(use_google_auth=True)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 560, in Load
+    cred = _Load(account, scopes, prevent_refresh, use_google_auth)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 710, in _Load
+    raise NoCredentialsForAccountException(account)
+googlecloudsdk.core.credentials.store.NoCredentialsForAccountException: Your current active account [801727839795-compute@developer.gserviceaccount.com] does not have any valid credentials
+Please run:
+
+  $ gcloud auth login
+
+to obtain new credentials.
+
+For service account, please activate it first:
+
+  $ gcloud auth activate-service-account ACCOUNT
+2022-05-12 10:03:33,280 ERROR    root            (gcloud.auth.docker-helper) Your current active account [801727839795-compute@developer.gserviceaccount.com] does not have any valid credentials
+Please run:
+
+  $ gcloud auth login
+
+to obtain new credentials.
+
+For service account, please activate it first:
+
+  $ gcloud auth activate-service-account ACCOUNT

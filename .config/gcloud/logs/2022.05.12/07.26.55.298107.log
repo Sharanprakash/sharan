@@ -1,0 +1,28 @@
+2022-05-12 07:26:55,299 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2022-05-12 07:26:55,302 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'activate_service_account']
+2022-05-12 07:26:55,305 DEBUG    root            Running [gcloud.auth.activate-service-account] with arguments: [--key-file: "/root/key.json", --project: "genuine-range-349802", ACCOUNT: "storage-bucket-bootcamp@genuine-range-349802.iam.gserviceaccount.com"]
+2022-05-12 07:26:55,305 DEBUG    root            (gcloud.auth.activate-service-account) Could not read json file /root/key.json: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/lib64/google-cloud-sdk/lib/surface/auth/activate_service_account.py", line 149, in _IsJsonFile
+    return json.loads(encoding.Decode(content)), True
+  File "/usr/lib64/google-cloud-sdk/platform/bundledpythonunix/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib64/google-cloud-sdk/platform/bundledpythonunix/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib64/google-cloud-sdk/platform/bundledpythonunix/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib64/google-cloud-sdk/lib/surface/auth/activate_service_account.py", line 100, in Run
+    file_content, is_json = _IsJsonFile(args.key_file)
+  File "/usr/lib64/google-cloud-sdk/lib/surface/auth/activate_service_account.py", line 152, in _IsJsonFile
+    raise auth_service_account.BadCredentialFileException(
+googlecloudsdk.api_lib.auth.service_account.BadCredentialFileException: Could not read json file /root/key.json: Expecting value: line 1 column 1 (char 0)
+2022-05-12 07:26:55,306 ERROR    root            (gcloud.auth.activate-service-account) Could not read json file /root/key.json: Expecting value: line 1 column 1 (char 0)

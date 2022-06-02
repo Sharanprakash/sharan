@@ -1,0 +1,12 @@
+ce_account",
+  "project_id": "genuine-range-349802",
+  "private_key_id": "14f4d6dbd094ca401a25367a098813bb6c249d04",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDYuwRieZI1xx8g\n4u+QO37RM2EIwlxuz2CznPncph7OifGXQC7tO+PtrT81FJ5gWQehVMP6SooXXUR6\nTtqWCN4GEbrMmGLQ/Pwq6G1q9NZRBtYNVCin8gTDKd5V6UTNwOJdZ/WpeWmYsJOf\nQu/YZgQvjThE+zw86xy5PE+1wRSISY8a/pG4G0viDVNFy8pWBXcsKKb3iVUyhe4t\ndw1XLACqhVelrAPTwAM7/8nBSXxrmnpyDI6kVihg1Hx5kTDIPA4ZWKeULHwLiyFj\nxCpnfYj35BXlVzoAWM3tHlmX37DmkaGfxW5N4Ol1kL1Q1f4FZrGaajkYRrGqimgL\n7+UKddSTAgMBAAECggEAFQhRLJ1Pqxhf1Pkw9nZPoE20JP13qulFISkitl8IrlKE\nt4DrDOq6+93MPIJ7vC3np6hqPGfvbsUGWDg+zkCeC0i9MA25yT5D2oYj2DVadxKK\nw1Bfgazi+W2evgedPbpyPU5RcNjvfnnkWZhNXlrIHTU/OLKI7gCDERbhRWova+pJ\nuFIonUAoBjZgOmPQg0rEc6ZHW69+yCFoMZNqHCQ8e1sMMH5LSAzW2Jnh9gFs5Lw7\nWaJ9ofJNhB9fwu2Kj4P3+4r8GM5cP5EZi9tZQkOwN0nXj9n5HtwhQfC4bPIp+y8/\nvYJVjKCFdJ/ZsZKGpRhbiyYkNBq4VC4lDytdPXnawQKBgQD932dC340eM9YN7bwy\nl4HYy03obyd03+eHms3xYQ8wYrvMFA8pF+/FnsPFlmkSYrUqiXiGoZWpXiRqUtdk\nlJcWLp+jinM2xNmb7XcK2n/ocFSaS3xne117s5wzOGIdTO7/DeQO8I7s84yGugih\nULk+lmK21JNP9jj56a3AT9uYLwKBgQDai/AlVH/MLSc7px0AHLtWT62KnBI9ZkEB\nBNRuvInzZW5vFtNx0v5VOWGWsA2zhxRSkgs0l4Y7xfPb9eNwOX/1CdanyjA2OZkA\n6lnMPt1Tct5sE4OEjxMlOHZ2U3jKIIJQ6L2Biihc548RgBdqkUvakAl3jDJl707N\n4THdh8LM3QKBgHOEvVr7mB3/Hk62N6WZtTbtw6SZN44B+DuHIGDOdnfg5W1GT2O2\nhZ8Z0CFPgL4h9ifF5/by/cPUl6Nd0K7uwhUQ4AktjaGFTzOZiUqCBCPDQWv4H0KD\nKxWHs/LGnDaS9ElQi86UfaSqae5AJn8o2TH2gjKJZgLDmkd1ol9YtyZ3AoGAOCxR\n3HZ8prFQbT/F73pzGHtAYuk8svVubeGc7J2fY6VFnl4imRYfcy5djArSarukmJib\nMrhjs0dtJ7Nq8zSEVCpkNxp8C+QAFMEntZzO7J0Q2HyniFHyHNYHdOB9oo56kGtS\nElK9jyuhlWD0I9sWwSXWmRi694JsIfTpCUTU6C0CgYEAwI93Uw3PVG1/D6inMKqE\nFkvh9rAMi26593Q/X6fmX8YyskPjjBvGRTAazgCIZhTezypq9W/0LgSqbJWNjOq8\n8WTZXpoFvviGtwPa001ILylLVdpXbGXPGzasrD6ReGaTpuGTZJ2PpN6vEb86AW01\ncn1rl7zvTCNKbkqMo1LlGHs=\n-----END PRIVATE KEY-----\n",
+  "client_email": "storage-bucket-bootcamp@genuine-range-349802.iam.gserviceaccount.com",
+  "client_id": "100856072757830162258",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/storage-bucket-bootcamp%40genuine-range-349802.iam.gserviceaccount.com"
+}
+

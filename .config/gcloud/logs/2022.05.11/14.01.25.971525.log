@@ -1,0 +1,47 @@
+2022-05-11 14:01:26,038 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2022-05-11 14:01:26,065 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'instances']
+2022-05-11 14:01:26,086 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'instances', 'set_service_account']
+2022-05-11 14:01:26,090 DEBUG    root            Running [gcloud.compute.instances.set-service-account] with arguments: [--scopes: "['storage-rw']", INSTANCE_NAME: "instance1"]
+2022-05-11 14:01:26,106 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/?recursive=true
+2022-05-11 14:01:26,109 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-05-11 14:01:26,111 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 197
+2022-05-11 14:01:26,112 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/token
+2022-05-11 14:01:26,114 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 277
+2022-05-11 14:01:26,196 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/?recursive=true
+2022-05-11 14:01:26,197 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-05-11 14:01:26,199 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 197
+2022-05-11 14:01:26,200 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/token
+2022-05-11 14:01:26,202 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 277
+2022-05-11 14:01:31,941 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): compute.googleapis.com:443
+2022-05-11 14:01:32,144 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "POST /batch/compute/v1 HTTP/1.1" 200 None
+2022-05-11 14:01:37,272 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "POST /batch/compute/v1 HTTP/1.1" 200 None
+2022-05-11 14:01:42,403 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "POST /batch/compute/v1 HTTP/1.1" 200 None
+2022-05-11 14:01:47,527 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "POST /batch/compute/v1 HTTP/1.1" 200 None
+2022-05-11 14:01:52,651 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "POST /batch/compute/v1 HTTP/1.1" 200 None
+2022-05-11 14:01:52,653 DEBUG    root            (gcloud.compute.instances.set-service-account) Could not fetch resource:
+ - Request had insufficient authentication scopes.
+Traceback (most recent call last):
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib64/google-cloud-sdk/lib/surface/compute/instances/set_service_account.py", line 139, in Run
+    email = self._email(args, instance_ref, client)
+  File "/usr/lib64/google-cloud-sdk/lib/surface/compute/instances/set_service_account.py", line 100, in _email
+    return self._original_email(instance_ref, client)
+  File "/usr/lib64/google-cloud-sdk/lib/surface/compute/instances/set_service_account.py", line 75, in _original_email
+    instance = self._get_instance(instance_ref, client)
+  File "/usr/lib64/google-cloud-sdk/lib/surface/compute/instances/set_service_account.py", line 67, in _get_instance
+    instance = client.MakeRequests(requests=[request])
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/client_adapter.py", line 106, in MakeRequests
+    utils.RaiseToolException(
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/utils.py", line 128, in RaiseToolException
+    RaiseException(problems, calliope_exceptions.ToolException, error_message)
+  File "/usr/lib64/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/utils.py", line 137, in RaiseException
+    raise exception(
+googlecloudsdk.calliope.exceptions.ToolException: Could not fetch resource:
+ - Request had insufficient authentication scopes.
+
+2022-05-11 14:01:52,658 ERROR    root            (gcloud.compute.instances.set-service-account) Could not fetch resource:
+ - Request had insufficient authentication scopes.
+

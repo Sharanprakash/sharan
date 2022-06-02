@@ -1,0 +1,20 @@
+2022-05-12 06:59:52,289 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2022-05-12 06:59:52,361 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'set']
+2022-05-12 06:59:52,364 DEBUG    root            Running [gcloud.config.set] with arguments: [SECTION/PROPERTY: "project", VALUE: "genuine-range-349802"]
+2022-05-12 06:59:52,374 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/?recursive=true
+2022-05-12 06:59:52,376 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-05-12 06:59:52,377 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 197
+2022-05-12 06:59:52,377 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/token
+2022-05-12 06:59:52,390 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 276
+2022-05-12 06:59:52,468 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/?recursive=true
+2022-05-12 06:59:52,470 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-05-12 06:59:52,471 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 197
+2022-05-12 06:59:52,472 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/token
+2022-05-12 06:59:52,474 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/801727839795-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 276
+2022-05-12 06:59:52,486 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2022-05-12 06:59:53,867 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "GET /v1/projects/genuine-range-349802?alt=json HTTP/1.1" 403 None
+2022-05-12 06:59:53,869 WARNING  root            You do not appear to have access to project [genuine-range-349802] or it does not exist.
+2022-05-12 06:59:59,556 INFO     ___FILE_ONLY___ Updated property [core/project].
+
+2022-05-12 06:59:59,557 INFO     root            Display format: "default"
+2022-05-12 06:59:59,558 DEBUG    root            SDK update checks are disabled.
