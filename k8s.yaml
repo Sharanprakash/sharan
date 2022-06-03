@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:my-deployment
+  labels:
+    app: myserver
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: myserrver
+  template:
+    metadata:
+      labels:
+        app: myserver
+    spec:
+      containers:
+      - name: myserver
+        image:gcr.io/genuine-range-349802/testimage@sha256:d50baa9f39dbde868837f3653c5fc93563981a4aa208c1792da26fd42cf23356
+        ports:
+        - containerPort: 80
+
+------------------------------------------
+apiVersion: v1
+kind: Service
+metadata:
+ name: my-service
+ labels:
+  app: myserver
+spec:
+ ports:
+  - port: 80
+    targetPort: 80
+ selector:
+  app: myserver
+ type: LoadBalancer
