@@ -5,7 +5,7 @@ pipeline {
         registry = "gcr.io/genuine-range-349802/"
         //- update your credentials ID after creating credentials for connecting to GCR
         registryCredential = 'genuine-range-349802'
-        dockerImage = "
+        dockerImage = ""
     }
     stages {
 
