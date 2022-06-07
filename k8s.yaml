@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name:my-deployment
+  name : mydeployment
   labels:
-    app: myserver
+    app : myserver
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app: myserrver
+     app: myserver
   template:
     metadata:
-      labels:
-        app: myserver
+     labels:
+      app: myserver
     spec:
       containers:
       - name: myserver
-        image:gcr.io/genuine-range-349802/demo
+        image: gcr.io/genuine-range-349802/demo
         ports:
         - containerPort: 80
 
-------------------------------------------
-apiVersion: v1
+ ------------------------------------------
+apiVersion : v1
 kind: Service
 metadata:
  name: my-service
