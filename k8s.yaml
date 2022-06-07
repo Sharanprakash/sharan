@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: myserver
-        image: gcr.io/genuine-range-349802/demo
+        image: gcr.io/genuine-range-349802/demo:latest
         ports:
         - containerPort: 80
 ---
